@@ -46,6 +46,8 @@ playDrum = (key) => {
 
 buttonAnimation = (key) => {
     const button = document.querySelector("." + key);
-    button.classList.add("pressed");
-    setTimeout(() => button.classList.remove("pressed"), 100);
+    if (button) {
+        button.classList.add("pressed");
+        setTimeout(() => button.classList.remove("pressed"), 100);
+    }
 }
